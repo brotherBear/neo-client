@@ -17,7 +17,8 @@
     <properties>
         <project.build.sourceencoding>UTF-8</project.build.sourceencoding>
         <slf4j.version>1.6.1</slf4j.version>
-        <jdk.version>10</jdk.version>
+        <jdk.version>11</jdk.version>
+        <java.version>11</java.version>
     </properties>
 
     <packaging>pom</packaging>
@@ -25,38 +26,33 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.neo4j</groupId>
             <artifactId>neo4j-jdbc</artifactId>
-            <version>2.0.2</version>
+            <version>4.0.4</version>
         </dependency>
         <dependency>
             <groupId>org.neo4j.driver</groupId>
             <artifactId>neo4j-java-driver</artifactId>
-            <version>1.4.4</version>
+            <version>4.3.4</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
+            <version>1.7.32</version>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.neo4j.driver</groupId>
-            <artifactId>neo4j-java-driver</artifactId>
-            <version>1.4.4</version>
+            <version>1.7.32</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -75,10 +71,9 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
+                    <version>3.8.0</version>
 
                     <configuration>
-                        <release>10</release>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
                     </configuration>
